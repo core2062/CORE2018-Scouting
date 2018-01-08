@@ -1,0 +1,52 @@
+table, th, td, tr {
+    text-align: center !important; 
+}
+td {
+	text-align: center;
+}
+tr {
+	text-align: center;
+}
+td.not_submitted {
+ background-color: #DADADA;
+}
+td.submitted {
+ background-color: #595959;
+}
+td.ready_to_generate {
+ background-color: #FF731C;
+}
+td.not_ready_to_generate {
+ background-color: #4682b4;
+}
+td.my_team {
+	font-weight: bold;
+}
+
+/* This is old CSS that is no longer used ATM
+td.colRed{
+	background-color: red;
+}
+
+td.colBlue{
+	background-color: blue;
+}
+td.red{
+	background-color: #e60000;
+}
+
+td.green{
+	background-color: #006600;
+}
+
+td.grey{
+	background-color: #808080;
+}
+
+td.blue{
+	background-color: #2020df;
+}
+td.orange{
+	background-color: #ff731c;
+}
+*/
