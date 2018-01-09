@@ -25,17 +25,22 @@ TEAM_FIELD_NUMBER = {'team_number': 'TeamNumber'}
 MATCH_NUMBER = {'match_number': 'MatchNumber'}
 
 CHECKBOX_NAMES = [
- #EXAMPLE   'CrossedBaselineAuto',
+    'CrossedBaselineAuto',
 ]
 NUMBER_NAMES = [
     MATCH_NUMBER['match_number'],
-    # EXAMPLE    'PressureAuto',
+    'CubesHomeSwitch',
+    ''
 ]
 TEXT_NAMES = [
-    # EXAMPLE     'ScoutName',
+    'ScoutName',
+    'comments'
 ]
 RADIO_NAMES = [
     # EXAMPLE     'DeliverGearAuto',
+    'SwitchCubeAuto',
+    'ScaleCubeAuto',
+    'ExchangeCubeAuto'
 ]
 RADIO_VALUES = {
     # EXAMPLE     'DeliverGearAuto': ('BoilerGearAuto', 'MiddleGearAuto', 'FeederGearAuto', 'None'),
