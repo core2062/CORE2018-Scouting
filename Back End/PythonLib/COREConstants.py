@@ -26,11 +26,15 @@ MATCH_NUMBER = {'match_number': 'MatchNumber'}
 
 CHECKBOX_NAMES = [
     'CrossedBaselineAuto',
+    'LevitateUsed',
+    'Intake'
 ]
 NUMBER_NAMES = [
     MATCH_NUMBER['match_number'],
-    'CubesHomeSwitch',
-    ''
+    'CubesHomeSwitchTele',
+    'CubesScaleTele',
+    'CubesOpposingSwitchTele',
+    'CubesExchangeTele'
 ]
 TEXT_NAMES = [
     'ScoutName',
@@ -38,9 +42,13 @@ TEXT_NAMES = [
 ]
 RADIO_NAMES = [
     # EXAMPLE     'DeliverGearAuto',
-    'SwitchCubeAuto',
-    'ScaleCubeAuto',
-    'ExchangeCubeAuto'
+    'CubeSwitchAuto',
+    'CubeScaleAuto',
+    'CubeExchangeAuto',
+    'ForceUsed',
+    'BoostUsed',
+    'Climb'
+
 ]
 RADIO_VALUES = {
     # EXAMPLE     'DeliverGearAuto': ('BoilerGearAuto', 'MiddleGearAuto', 'FeederGearAuto', 'None'),
@@ -75,6 +83,7 @@ RANK_ONLY_HEADERS = [
 # Shows up on Match Report only
 MATCH_HEADERS = [
   # EXAMPLE     'Avg Gears Auto, Gears : Matches Played',
+
 ]
 
 
