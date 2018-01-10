@@ -235,7 +235,7 @@ class Team:
 
             category : radio name that exists in the database.
             key : a COREDependencies.COREConstants.RADIO_VALUES option for the given category.
-            Or 'Yes' / 'No' if checkbox
+            Or 'ON' / 'OFF' if checkbox
             return : number of times 'key' exists """
 
         if self._verify_category(category) == 1:

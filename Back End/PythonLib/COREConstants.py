@@ -27,7 +27,8 @@ MATCH_NUMBER = {'match_number': 'MatchNumber'}
 CHECKBOX_NAMES = [
     'CrossedBaselineAuto',
     'LevitateUsed',
-    'Intake'
+    'FloorIntake',
+    'CubeExchangeAuto'
 ]
 NUMBER_NAMES = [
     MATCH_NUMBER['match_number'],
@@ -44,7 +45,6 @@ RADIO_NAMES = [
     # EXAMPLE     'DeliverGearAuto',
     'CubeSwitchAuto',
     'CubeScaleAuto',
-    'CubeExchangeAuto',
     'ForceUsed',
     'BoostUsed',
     'Climb'
@@ -52,6 +52,11 @@ RADIO_NAMES = [
 ]
 RADIO_VALUES = {
     # EXAMPLE     'DeliverGearAuto': ('BoilerGearAuto', 'MiddleGearAuto', 'FeederGearAuto', 'None'),
+    'CubeSwitchAuto': ('Left', 'Right', 'None', 'Failed'),
+    'CubeScaleAuto': ('Left', 'Right', 'None', 'Failed'),
+    'ForceUsed': ('None', '1', '2', '3'),
+    'BoostUsed': ('None', '1', '2', '3'),
+    'Climb': ('None', 'Parked', 'Climbed', 'Levitated', 'Failed')
 }
 
 ALL_NAMES = []
@@ -72,18 +77,23 @@ Match Report Row Headers (no dependency)
 
 # Show up on Match Report and Ranking Report if applicable
 RANK_AND_MATCH_HEADERS = [
-    # EXAMPLE     'Avg Gear Lost Transit',
 ]
 
 # Shows up as a ranking Option only
 RANK_ONLY_HEADERS = [
-    # EXAMPLE     'Climb Percentage',
+    'Climb Percentage',
+    'Auto Switch Percentage',
+    'Auto Scale Percentage',
+    'Auto Exchange Percentage',
+    'Crossed Baseline Percentage'
 ]
 
 # Shows up on Match Report only
 MATCH_HEADERS = [
-  # EXAMPLE     'Avg Gears Auto, Gears : Matches Played',
-
+    'Switch Auto, Left:Right:None',
+    'Scale Auto, Left:Right:None',
+    'FloorIntake',
+    'Comments'
 ]
 
 
