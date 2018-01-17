@@ -46,7 +46,6 @@
       					<a href="#panel1" class="show-for-small-only">Match/Scout Info</a>
       						<div id="panel1" class="content active">
       							<div class="content-box section-box">
-      								
       								<div class="row">
       									<div class="small-12 columns">
       										<label>Match Number: *
@@ -69,60 +68,48 @@
 												<input name="ScoutName" placeholder="John Smith" autocomplete="off" data-parsley-required="true"/>
 											</label>
 										</div>
-									</div>									
-
+									</div>
 								</div>
 							</div>
 
 							<a href="#panel2" class="show-for-small-only">Autonomous Period</a>
 	        					<div id="panel2" class="content">
 	        						<div class="content-box section-box">
-
+                                        <div class="row">
+                                    		<fieldset class="large-6 columns">
+                                        	<legend>Crossed Auto Line:</legend>
+                                         		<input name="CrossedBaselineAuto" id="CrossedBaseline" type="checkbox"><label for="CrossedBaseline">Yes</label>
+                                    		</fieldset>
+                                        </div>
       									<div class="row">
       										<fieldset class="large-6 columns">
-      										<legend>Deliver Gear:</legend>
-      										 	<input onclick="EnableAutoGearStatus()"  name="DeliverGearAuto" id="BoilerGearAuto" value="BoilerGearAuto" type="radio"><label for="BoilerGearAuto">Boiler Side</label>
-      										 	<input required="" onclick="EnableAutoGearStatus()" name="DeliverGearAuto" id="middlegear" value="MiddleGearAuto" type="radio"><label for="middlegear">Middle</label>
-      										 	<input required="" onclick="EnableAutoGearStatus()" name="DeliverGearAuto" id="FeederGearAuto" value="FeederGearAuto" type="radio"><label for="FeederGearAuto">Feeder Side</label>
-       										 	<input required="" onclick="DisableAutoGearStatus()" name="DeliverGearAuto" id="nonegear" value="None" type="radio"><label for="nonegear">None</label>    										 
+      										<legend>Delivered Cube in Switch:</legend>
+      										 	<input onclick="EnableAutoGearStatus()"  name=								"DeliverSwitchAuto" id="LeftSwitchAuto" value="LeftSwitchAuto" type="radio"><label for="LeftSwitchAuto">			Left</label>
+      										 	<input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="DeliverSwitchAuto" value="RightSwitchAuto" type="radio"><label for="RightSwitchAuto">Right</label>
+      										 	<input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="DeliverSwitchAuto" value="FailedSwitchAuto" type="radio"><label for="FailedSwitchAuto">Fail</label>
+       										 	<input required="" onclick="DisableAutoGearStatus()" name="DeliverSwitchAuto" id="DeliverSwitchAuto" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
       										</fieldset>
-                        </div>
-                        <div class="row">
-                          <fieldset id="AutoGearStatus">
-                            <legend>Success/Fail:</legend>
-                            <input name="AutoGearSuccessFail" id="Success" value="Success" type="radio"><label for="Success">Success</label>
-                            <input name="AutoGearSuccessFail" id="Fail" value="Fail" type="radio"><label for="Fail">Fail</label>
-                          <fieldset>
+                        				</div>
 
-      									</div>
-
-      								<div class="row">
-      									<fieldset class="large-6 columns">
-      										<legend>Crossed Baseline:</legend>
-      										 <input name="CrossedBaselineAuto" id="CrossedBaseline" type="checkbox"><label for="CrossedBaseline">Yes</label>
-      									</fieldset>
+                                        <div class="row">
+      										<fieldset class="large-6 columns">
+                                                <legend>Delivered Cube in Scale:</legend>
+                                                    <input onclick="EnableAutoGearStatus()"  name=								"DeliverScaleAuto" id="LeftScaleAuto" value="LeftScaleAuto" type="radio"><label for="LeftScaleAuto">Left</label>
+                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="RightScaleAuto" value="RightScaleAuto" type="radio"><label for="RightScaleAuto">Right</label>
+                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="FailedScaleAuto" value="FailedScaleAuto" type="radio"><label for="FailedScaleAuto">Fail</label>
+                                                    <input required="" onclick="DisableAutoGearStatus()" name="DeliverSwitchAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
+      										</fieldset>
+                        				</div>
+                                        <div class="row">
+                                            <fieldset class="large-6 columns">
+                                                <legend>Delivered in Exchange</legend>
+                                                <input name="DeliveredExchangeAuto" id="DidDeliverInExchange" type="radio"><label for="DidDeliverInExchange">Yes</label>
+                                                <input name="DeliveredExchangeAuto" id="DidNotDeliverInExchange" type="radio"><label for="DidNotDeliverInExchange">No</label>
+                                            	<input name="DeliveredExchangeAuto" id="FailedDeliveryInExchange" type="radio"><label for="FailedDeliveryInExchange">Fail</label>
+                                            </fieldset>
+                                        </div>
       								</div>
-
-      								<div class="row">
-      									<fieldset class="large-6 columns">
-      										<legend>Score Fuel:</legend>
-      										 <input required="" name="FuelAuto" onclick="EnableAutoPressure()" id="FuelLowAuto" value="FuelLowAuto" type="radio"><label for="FuelLowAuto">Low Goal</label>
-      										 <input required="" name="FuelAuto" onclick="EnableAutoPressure()" id="FuelHighAuto" value="FuelHighAuto" type="radio"><label for="FuelHighAuto">High Goal</label>	 
-      										 <input required="" onclick="DisableAutoPressure()" name="FuelAuto" id="FuelNoneAuto" value="FuelNoneAuto" type="radio"><label for="FuelNoneAuto">None</label>	      										 
-      									</fieldset>
-      								</div>
-
-      								<div class="row" id="PostAutoPressure"> 
-      									<fieldset class="large-6 columns">
-      										<legend>Auto Pressure: *</legend>
-      										<label>
-      											<input data-parsley-required="true" data-parsley-range="[0, 100]" type="tel" value="0" id="PressureAuto" name="PressureAuto" autocomplete="off">
-      										</label>
-      									</fieldset>
-      								</div>
-
       							</div>
-      						</div>	
 
 
 
@@ -130,112 +117,74 @@
       					<a href="#panel3" class="show-for-small-only">Teleoperated Period</a>
       						<div id="panel3" class="content">
       							<div class="content-box section-box">
- 
+
                    					<div class="row">
                     					<div class="large-12 columns">
                       						<div class="row collapse">
-                          						<label>Fuel Cycles:</label>
+                          						<label>Cubes Delivered to Own Switch:</label>
                         							<div class="small-4 columns">
-                          								<input required type='button' class="button postfix" onclick='document.getElementById("FuelCycleCountTele").stepDown(1);' value='-'/>
-                        							</div>  
-                        							<div class="small-4 columns">
-                           					 			<input required type="number" name="FuelCycleCountTele" id="FuelCycleCountTele" min="0" step="1" value ="0" required readonly>
+                          								<input required type='button' class="button postfix" onclick='document.getElementById("OwnSwitchCubesDelivered").stepDown(1);' value='-'/>
                         							</div>
                         							<div class="small-4 columns">
-                          								<input required type='button' class="button postfix" onclick='document.getElementById("FuelCycleCountTele").stepUp(1);' value='+'/>
+                           					 			<input required type="number" name="OwnSwitchCubesDelivered" id="OwnSwitchCubesDelivered" min="0" step="1" value ="0" required readonly>
                         							</div>
-                      						</div>
-                   				 		</div>
-                  					</div>
-
-
+                        							<div class="small-4 columns">
+                          								<input required type='button' class="button postfix" onclick='document.getElementById("OwnSwitchCubesDelivered").stepUp(1);' value='+'/>
+                        							</div>
+                      							</div>
+                   				 			</div>
+                  						</div>
 
 									<div class="row">
                     					<div class="large-12 columns">
                       						<div class="row collapse">
-                          				<label>Gears Delivered:</label>
+                          				<label>Cubes Delivered to Scale:</label>
                         				<div class="small-4 columns">
-                          					<input required type='button' class="button postfix" onclick='document.getElementById("GearsDeliveredTele").stepDown(1);' value='-'/>
-                        				</div>  
-                        				<div class="small-4 columns">
-                           					 <input required type="number" name="GearsDeliveredTele" id="GearsDeliveredTele" min="0" step="1" value ="0" required readonly>
+                          					<input required type='button' class="button postfix" onclick='document.getElementById("ScaleCubesDelivered").stepDown(1);' value='-'/>
                         				</div>
                         				<div class="small-4 columns">
-                          				<input required type='button' class="button postfix" onclick='document.getElementById("GearsDeliveredTele").stepUp(1);' value='+'/>
-                        				</div>
-                      				</div>
-                   				 </div>
-                  				</div>                					 
-                  				
-
-                   					<div class="row">
-                  					<legend>Gears Dropped:</legend>
-                    					<div class="large-12 columns">
-                      						<div class="row collapse">
-                          				<label>Gears Dropped at Peg:</label>
-                        				<div class="small-4 columns">
-                          					<input required type='button' class="button postfix" onclick='document.getElementById("GearsDroppedTele").stepDown(1);' value='-'/>
-                        				</div>  
-                        				<div class="small-4 columns">
-                           					 <input required type="number" name="GearsDroppedTele" id="GearsDroppedTele" min="0" step="1" value ="0" required readonly>
+                           					 <input required type="number" name="ScaleCubesDelivered" id="ScaleCubesDelivered" min="0" step="1" value ="0" required readonly>
                         				</div>
                         				<div class="small-4 columns">
-                          				<input required type='button' class="button postfix" onclick='document.getElementById("GearsDroppedTele").stepUp(1);' value='+'/>
-                        				</div>
-                      				</div>
-                   				 </div>
-                   				 
-                  				</div>  
-
-                   					<div class="row">
-                    					<div class="large-12 columns">
-                      						<div class="row collapse">
-                          				<label>Gears Lost In Transit:</label>
-                        				<div class="small-4 columns">
-                          					<input required type='button' class="button postfix" name='subtract' onclick='document.getElementById("GearsDroppedTransitTele").stepDown(1);' value='-'/>
-                        				</div>  
-                        				<div class="small-4 columns">
-                           					 <input required type="number" name="GearsDroppedTransitTele" id="GearsDroppedTransitTele" min="0" step="1" value ="0" required readonly>
-                        				</div>
-                        				<div class="small-4 columns">
-                          				<input required type='button' class="button postfix" name='add' onclick='document.getElementById("GearsDroppedTransitTele").stepUp(1);' value='+'/>
-                        				</div>
-                      				</div>
-                   				 </div>
-                  				</div> 
-
-                   					<div class="row">
-                    					<div class="large-12 columns">
-                      						<div class="row collapse">
-                          				<label>Gears Dropped at Feeder Station:</label>
-                        				<div class="small-4 columns">
-                          					<input required type='button' class="button postfix" name='subtract' onclick='document.getElementById("GearsDroppedFeederTele").stepDown(1);' value='-'/>
-                        				</div>  
-                        				<div class="small-4 columns">
-                           					 <input required type="number" name="GearsDroppedFeederTele" id="GearsDroppedFeederTele" min="0" step="1" value ="0" required readonly>
-                        				</div>
-                        				<div class="small-4 columns">
-                          				<input required type='button' class="button postfix" name='add' onclick='document.getElementById("GearsDroppedFeederTele").stepUp(1);' value='+'/>
+                          				<input required type='button' class="button postfix" onclick='document.getElementById("ScaleCubesDelivered").stepUp(1);' value='+'/>
                         				</div>
                       				</div>
                    				 </div>
                   				</div>
+
+
+                   					<div class="row">
+                    					<div class="large-12 columns">
+                      						<div class="row collapse">
+                                                <label>Cubes Delivered to Opposing Switch:</label>
+                                                <div class="small-4 columns">
+                                                    <input required type='button' class="button postfix" onclick='document.getElementById("OpposingSwitchCubesDelivered").stepDown(1);' value='-'/>
+                                                </div>
+                                                <div class="small-4 columns">
+                                                     <input required type="number" name="OpposingSwitchCubesDelivered" id="OpposingSwitchCubesDelivered" min="0" step="1" value ="0" required readonly>
+                                                </div>
+                                                <div class="small-4 columns">
+                                                <input required type='button' class="button postfix" onclick='document.getElementById("OpposingSwitchCubesDelivered").stepUp(1);' value='+'/>
+                                                </div>
+                                 			</div>
+                   				 		</div>
+                  					</div>
                   				</fieldset>
-                  				
+
 
       							<div class="row">
       									<fieldset class="large-12 columns">
 
-      										<legend>Gear Manipulation:</legend>
+      										<legend>Cube Manipulation:</legend>
 
-      										 <input name="GearFloorPickup" id="GearFloorPickup" type="checkbox"><label for="GearFloorPickup">Gear Floor Pickup?</label>
+      										 <input name="CubeFloorPickup" id="CubeFloorPickup" type="checkbox"><label for="CubeFloorPickup">Cube Floor Pickup?</label>
 
-      										<legend>Gear Handling Type:</legend>
+      										<legend>Cube Handling Type:</legend>
       										 <input required="" name="GearFloorPickupType" id="ActivePickup" value="Active" type="radio"><label for="ActivePickup">Active</label>
       										  <input required="" name="GearFloorPickupType" id="PassivePickup" value="Passive" type="radio"><label for="PassivePickup">Passive</label>
       										  <input required="" name="GearFloorPickupType" id="NoPickup" value="None" type="radio"><label for="NoPickup">None</label>
       									</fieldset>
-      								</div>                  				
+      								</div>
 
       							<div class="row">
       									<fieldset class="large-12 columns">
@@ -248,12 +197,12 @@
       								</div>
 
 								</div>
-							
+
 
 							<fieldset>
 								<legend>Score Fuel:</legend>
 								<div class="row">
-									
+
 									<input required="" name="ShooterType" id="High" onclick="HighGoal()" value="High" type="radio"><label for="High">High Goal</label>
 									<input required="" onclick="LowGoal()" name="ShooterType" id="Low" value="Low" type="radio"><label for="Low">Low Goal</label>
 									 <input required="" name="ShooterType" id="None" onclick="BothDisabled()" value="None" type="radio"><label for="None">None</label>
@@ -274,6 +223,7 @@
       										 <input name="HighAccuracy" id="25" value="25" type="radio"><label for="25">25% or less</label>
       										 <input name="HighAccuracy" id="50" value="50" type="radio"><label for="50">About 50%</label>
       										 <input name="HighAccuracy" id="75" value="75" type="radio"><label for="75">75% or more</label>
+
       								</div>
 
       								<div class="row"> 
