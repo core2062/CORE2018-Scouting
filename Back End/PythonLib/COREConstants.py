@@ -85,13 +85,17 @@ RANK_ONLY_HEADERS = [
     'Auto Switch Percentage',
     'Auto Scale Percentage',
     'Auto Exchange Percentage',
-    'Crossed Baseline Percentage'
+    'Crossed Baseline Percentage',
+    'Cubes Delivered: Home Switch',
+    'Cubes Delivered: Scale',
+    'Cubes Delivered: Opposing Switch',
+    'Cubes Delivered: Exchange'
 ]
 
 # Shows up on Match Report only
 MATCH_HEADERS = [
-    'Switch Auto, Left:Right:None',
-    'Scale Auto, Left:Right:None',
+    'Switch Auto, Left:Right:Fail:None',
+    'Scale Auto, Left:Right:Fail:None',
     'FloorIntake',
     'Comments'
 ]
@@ -125,6 +129,13 @@ RANK_REPORT_FIELD_NAMES = {
 
 RANK_OPTIONS = [
     # EXAMPLE     ('Defense', 'Defense Rating', 'category', ('Amazing', 'Good', 'Alright', 'Not Great')) (Also can look above for example^^^
+    ('ClimbPercent', 'Climbing Percentage', 'descending'),
+    ('AutoSwitchPercent', 'Auto Switch Percentage', 'descending'),
+    ('AutoScalePercent', 'Auto Scale Percentage', 'descending'),
+    ('AutoExchangePercent', 'Auto Exchange Percent', 'descending'),
+    ('CrossBaselinePercent', 'Cross Baseline Percentage', 'descending'),
+    ('TeleCubesHSwitch', 'Cubes Delivered: Home Switch', 'descending'),
+    ('TeleCubesOSwitch', 'Cubes Delivered: Opposing Switch', 'descending'),
+    ('TeleCubesScale', 'Cubes Delivered: Scale', 'descending'),
+    ('TeleCubesExchange', 'Cubes Delivered: Exchange', 'descending'),
 ]
-"""('highGoals', 'High Goal Accuracy', 'descending'),
-    ('Autotype', 'Auto Type', 'category', ('Moat', 'Rockwall', 'RoughTerrain'))"""

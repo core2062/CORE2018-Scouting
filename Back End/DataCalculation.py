@@ -29,17 +29,19 @@ class TeamData(CORETeamData.Team):
         # Auto Switch Percentage and Stats
         AutoSwitchLeft = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], COREDependencies.COREConstants.RADIO_VALUES[['CubeSwitchAuto'][0]])
         AutoSwitchRight = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], COREDependencies.COREConstants.RADIO_VALUES[['CubeSwitchAuto'][1]])
-        AutoSwitchFail = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], COREDependencies.COREConstants.RADIO_VALUES[['CubeSwitchAuto'][2]])
+        AutoSwitchNone = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], COREDependencies.COREConstants.RADIO_VALUES[['CubeScaleAuto'][2]])
+        AutoSwitchFail = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], COREDependencies.COREConstants.RADIO_VALUES[['CubeSwitchAuto'][3]])
         AutoSwitchTotal = AutoSwitchLeft + AutoSwitchRight
         self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[1]] = AutoSwitchTotal / MatchesPlayed
-        self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[0]] = AutoSwitchLeft + ' : ' + AutoSwitchRight + ' : ' + AutoSwitchFail
+        self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[0]] = AutoSwitchLeft + ' : ' + AutoSwitchRight + ' : ' + AutoSwitchFail + ' : ' + AutoSwitchNone
         # Auto Scale Percentage and Stats
         AutoScaleLeft = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], COREDependencies.COREConstants.RADIO_VALUES[['CubeScaleAuto'][0]])
         AutoScaleRight = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], COREDependencies.COREConstants.RADIO_VALUES[['CubeScaleAuto'][1]])
-        AutoScaleFail = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], COREDependencies.COREConstants.RADIO_VALUES[['CubeScaleAuto'][2]])
+        AutoScaleFail = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], COREDependencies.COREConstants.RADIO_VALUES[['CubeScaleAuto'][3]])
+        AutoScaleNone = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], COREDependencies.COREConstants.RADIO_VALUES[['CubeScaleAuto'][2]])
         AutoScaleTotal = AutoScaleLeft + AutoScaleRight
         self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[1]] = AutoScaleTotal / MatchesPlayed
-        self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[0]] = AutoScaleLeft + ' : ' + AutoScaleRight + ' : ' + AutoScaleFail
+        self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[0]] = AutoScaleLeft + ' : ' + AutoScaleRight + ' : ' + AutoScaleFail + ' : ' + AutoScaleNone
         # Auto Exchange Percentage
         self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[3]] = self.times_key_exists_in_category(COREDependencies.COREConstants.CHECKBOX_NAMES[3], ['ON']) / MatchesPlayed
         # Floor Intake
@@ -49,4 +51,3 @@ class TeamData(CORETeamData.Team):
         else:
             FloorPickup = 'No'
         self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[2]] = FloorPickup
-        # 
