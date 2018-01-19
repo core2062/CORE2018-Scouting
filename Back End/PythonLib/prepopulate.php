@@ -169,9 +169,23 @@
                                  			</div>
                    				 		</div>
                   					</div>
+                                    <div class="row">
+                    					<div class="large-12 columns">
+                      						<div class="row collapse">
+                                                <label>Cubes Delivered to Exchange:</label>
+                                                <div class="small-4 columns">
+                                                    <input required type='button' class="button postfix" onclick='document.getElementById("ExchangeCubesDelivered").stepDown(1);' value='-'/>
+                                                </div>
+                                                <div class="small-4 columns">
+                                                     <input required type="number" name="ExchangeCubesDelivered" id="ExchangeCubesDelivered" min="0" step="1" value ="0" required readonly>
+                                                </div>
+                                                <div class="small-4 columns">
+                                                <input required type='button' class="button postfix" onclick='document.getElementById("ExchangeCubesDelivered").stepUp(1);' value='+'/>
+                                                </div>
+                                 			</div>
+                   				 		</div>
+                  					</div>
                   				</fieldset>
-
-
       							<div class="row">
       									<fieldset class="large-12 columns">
 
@@ -185,93 +199,29 @@
       										  <input required="" name="GearFloorPickupType" id="NoPickup" value="None" type="radio"><label for="NoPickup">None</label>
       									</fieldset>
       								</div>
-
-      							<div class="row">
-      									<fieldset class="large-12 columns">
-
-      										<legend>Fuel Pickup Style:</legend>
-
-      										 <input name="FuelPickupHopper" id="FuelPickupHopper" type="checkbox"><label for="FuelPickupHopper">Hopper/Feeder</label>
-      										 <input name="FuelPickupFloor" id="FuelPickupFloor" type="checkbox"><label for="FuelPickupFloor">Floor</label>
-      									</fieldset>
-      								</div>
-
 								</div>
+								<fieldset>
+                                    <legend>Climbing:</legend>
+                                    <div class="row">
 
+                                        <input required="" name="Climb" id="DidClimb" value="DidClimb" type="radio"><label for="DidClimb">Sucessful Climb</label>
+                                        <input required="" name="Climb" id="NoClimb" value="NoClimb" type="radio"><label for="NoClimb">No Climb</label>
+                                         <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
 
-							<fieldset>
-								<legend>Score Fuel:</legend>
-								<div class="row">
+                                    </div>
+								</fieldset>
 
-									<input required="" name="ShooterType" id="High" onclick="HighGoal()" value="High" type="radio"><label for="High">High Goal</label>
-									<input required="" onclick="LowGoal()" name="ShooterType" id="Low" value="Low" type="radio"><label for="Low">Low Goal</label>
-									 <input required="" name="ShooterType" id="None" onclick="BothDisabled()" value="None" type="radio"><label for="None">None</label>
-
-								</div>
-							</fieldset>
-
-
-                  					<fieldset id="HighFieldset">
-                  					<legend>High Goal:</legend>
-                   					<div class="row" id="HighOption">
-      										<legend>Frequency:</legend>
-      										 <input name="HighFrequency" id="Slow" value="Slow" type="radio"><label for="Slow">Slow</label>
-      										 <input name="HighFrequency" id="Medium" value="Medium" type="radio"><label for="Medium">Medium</label>
-      										 <input name="HighFrequency" id="Fast" value="Fast" type="radio"><label for="Fast">Fast</label>
-
-      										 <legend>Accuracy:</legend>
-      										 <input name="HighAccuracy" id="25" value="25" type="radio"><label for="25">25% or less</label>
-      										 <input name="HighAccuracy" id="50" value="50" type="radio"><label for="50">About 50%</label>
-      										 <input name="HighAccuracy" id="75" value="75" type="radio"><label for="75">75% or more</label>
-
-      								</div>
-
-      								<div class="row"> 
-      										<legend>Post Match Alliance Pressure:</legend>
-      										<label>
-      											<input id="HighAlliancePressure" data-parsley-type="integer" type="tel" name="HighAlliancePressure" autocomplete="off" value="0">
-      										</label>
-      								</div>
-
-      									</fieldset>                       				
-                   				 
-                  				
-
-       								<div class="row">
-      									<fieldset class="large-6 columns" id="LowFieldset">
-      										<legend>Low Goal:</legend>
-                          <legend> </legend>
-                          <legend>Frequency:</legend>
-      										 <input name="LowGoalFrequency" id="SlowLow" value="SlowLow" type="radio"><label for="SlowLow">Slow</label>
-      										 <input name="LowGoalFrequency" id="FastLow" value="FastLow" type="radio"><label for="FastLow">Fast</label>	 
-      									</fieldset>
-      								</div>                 										      								
-
-							
-							 
-
-							<fieldset>
-								<legend>Climbing:</legend>
-								<div class="row">
-									
-									<input required="" name="Climb" id="DidClimb" value="DidClimb" type="radio"><label for="DidClimb">Sucessful Climb</label>
-									<input required="" name="Climb" id="NoClimb" value="NoClimb" type="radio"><label for="NoClimb">No Climb</label>
-									 <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
-
-								</div>
-							</fieldset>
-
-      								<div class="row">
-      									<fieldset class="large-6 columns">
-      										<legend>Defense:</legend>
-                           <input required="" name="Defense" id="NotGreat" value="NotGreat" type="radio"><label for="NotGreat">Not Great</label>
-                           <input required="" name="Defense" id="Alright" value="Alright" type="radio"><label for="Alright">Alright</label>
-                           <input required="" name="Defense" id="Good" value="Good" type="radio"><label for="Good">Good</label>
-                           <input required="" name="Defense" id="Amazing" value="Amazing" type="radio"><label for="Amazing">Amazing</label>
-                           <input required="" name="Defense" id="DefenseNone" value="None" type="radio"><label for="DefenseNone">None</label>
-      									</fieldset>
-      								</div> 	
-      								</div>						
+                                <div class="row">
+                                    <fieldset class="large-6 columns">
+                                        <legend>Defense:</legend>
+                       <input required="" name="Defense" id="NotGreat" value="NotGreat" type="radio"><label for="NotGreat">Not Great</label>
+                       <input required="" name="Defense" id="Alright" value="Alright" type="radio"><label for="Alright">Alright</label>
+                       <input required="" name="Defense" id="Good" value="Good" type="radio"><label for="Good">Good</label>
+                       <input required="" name="Defense" id="Amazing" value="Amazing" type="radio"><label for="Amazing">Amazing</label>
+                       <input required="" name="Defense" id="DefenseNone" value="None" type="radio"><label for="DefenseNone">None</label>
+                                    </fieldset>
+                                </div>
+      						</div>
 
 
 									<div class="row">
