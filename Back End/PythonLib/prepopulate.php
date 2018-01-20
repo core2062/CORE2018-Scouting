@@ -203,11 +203,11 @@
 								<fieldset>
                                     <legend>Climbing:</legend>
                                     <div class="row">
-
-                                        <input required="" name="Climb" id="DidClimb" value="DidClimb" type="radio"><label for="DidClimb">Sucessful Climb</label>
                                         <input required="" name="Climb" id="NoClimb" value="NoClimb" type="radio"><label for="NoClimb">No Climb</label>
-                                         <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
-
+                                        <input required="" name="Climb" id="DidClimb" value="DidClimb" type="radio"><label for="DidClimb">Successful Climb</label>
+                                        <input required="" name="Climb" id="ClimbPark" value="ClimbPark" type="radio"><label for="ClimbFail">Parked</label>
+                                        <input required="" name="Climb" id="ClimbLevitate" value="ClimbLevitate" type="radio"><label for="ClimbFail">Levitated</label>
+                                        <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
                                     </div>
 								</fieldset>
 
