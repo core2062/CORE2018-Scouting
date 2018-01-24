@@ -14,7 +14,7 @@ General Team Info (no dependency)
 
 TEAM_NUMBER = 2062
 
-COMPETITION_NAME = 'Lacrosse_Qualifications'
+COMPETITION_NAME = '2018_PreComp'
 
 """===========================================
 Scout HTML input field names (form dependency)
@@ -26,37 +26,31 @@ MATCH_NUMBER = {'match_number': 'MatchNumber'}
 
 CHECKBOX_NAMES = [
     'CrossedBaselineAuto',
-    'LevitateUsed',
-    'FloorIntake',
-    'CubeExchangeAuto'
+    'CubeFloorPickup'
 ]
 NUMBER_NAMES = [
     MATCH_NUMBER['match_number'],
-    'CubesHomeSwitchTele',
-    'CubesScaleTele',
-    'CubesOpposingSwitchTele',
-    'CubesExchangeTele'
+    'OwnSwitchCubesDelivered',
+    'ScaleCubesDelivered',
+    'OpposingSwitchCubesDelivered',
+    'ExchangeCubesDelivered'
 ]
 TEXT_NAMES = [
     'ScoutName',
     'comments'
 ]
 RADIO_NAMES = [
-    # EXAMPLE     'DeliverGearAuto',
     'CubeSwitchAuto',
     'CubeScaleAuto',
-    'ForceUsed',
-    'BoostUsed',
+    'CubeExchangeAuto',
     'Climb'
 
 ]
 RADIO_VALUES = {
-    # EXAMPLE     'DeliverGearAuto': ('BoilerGearAuto', 'MiddleGearAuto', 'FeederGearAuto', 'None'),
-    'CubeSwitchAuto': ('Left', 'Right', 'None', 'Failed'),
-    'CubeScaleAuto': ('Left', 'Right', 'None', 'Failed'),
-    'ForceUsed': ('None', '1', '2', '3'),
-    'BoostUsed': ('None', '1', '2', '3'),
-    'Climb': ('None', 'Parked', 'Climbed', 'Levitated', 'Failed')
+    'CubeSwitchAuto': ('LeftSwitchAuto', 'RightSwitchAuto', 'NoAttempt', 'FailedSwitchAuto'),
+    'CubeScaleAuto': ('LeftScaleAuto', 'RightScaleAuto', 'NoAttempt', 'FailedScaleAuto'),
+    'CubeExchangeAuto': ('DidDeliverInExchange', 'DidNotDeliverInExchange', 'FailedDeliveryInExchange'),
+    'Climb': ('NoClimb', 'ClimbPark', 'DidClimb', 'ClimbLevitate', 'ClimbFail')
 }
 
 ALL_NAMES = []
@@ -96,7 +90,7 @@ RANK_ONLY_HEADERS = [
 MATCH_HEADERS = [
     'Switch Auto, Left:Right:Fail:None',
     'Scale Auto, Left:Right:Fail:None',
-    'FloorIntake',
+    'Exchange Auto, Yes:No:Fail',
     'Comments'
 ]
 
