@@ -95,9 +95,9 @@
       										<fieldset class="large-6 columns">
                                                 <legend>Delivered Cube in Scale:</legend>
                                                     <input onclick="EnableAutoGearStatus()"  name=								"DeliverScaleAuto" id="LeftScaleAuto" value="LeftScaleAuto" type="radio"><label for="LeftScaleAuto">Left</label>
-                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="RightScaleAuto" value="RightScaleAuto" type="radio"><label for="RightScaleAuto">Right</label>
-                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="FailedScaleAuto" value="FailedScaleAuto" type="radio"><label for="FailedScaleAuto">Fail</label>
-                                                    <input required="" onclick="DisableAutoGearStatus()" name="DeliverSwitchAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
+                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverScaleAuto" id="RightScaleAuto" value="RightScaleAuto" type="radio"><label for="RightScaleAuto">Right</label>
+                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverScaleAuto" id="FailedScaleAuto" value="FailedScaleAuto" type="radio"><label for="FailedScaleAuto">Fail</label>
+                                                    <input required="" onclick="DisableAutoGearStatus()" name="DeliverScaleAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
       										</fieldset>
                         				</div>
                                         <div class="row">
@@ -123,6 +123,7 @@
                       						<div class="row collapse">
                           						<label>Cubes Delivered to Own Switch:</label>
                         							<div class="small-4 columns">
+
                           								<input required type='button' class="button postfix" onclick='document.getElementById("OwnSwitchCubesDelivered").stepDown(1);' value='-'/>
                         							</div>
                         							<div class="small-4 columns">
@@ -205,8 +206,8 @@
                                     <div class="row">
                                         <input required="" name="Climb" id="NoClimb" value="NoClimb" type="radio"><label for="NoClimb">No Climb</label>
                                         <input required="" name="Climb" id="DidClimb" value="DidClimb" type="radio"><label for="DidClimb">Successful Climb</label>
-                                        <input required="" name="Climb" id="ClimbPark" value="ClimbPark" type="radio"><label for="ClimbFail">Parked</label>
-                                        <input required="" name="Climb" id="ClimbLevitate" value="ClimbLevitate" type="radio"><label for="ClimbFail">Levitated</label>
+                                        <input required="" name="Climb" id="ClimbPark" value="ClimbPark" type="radio"><label for="ClimbPark">Parked</label>
+                                        <input required="" name="Climb" id="ClimbLevitate" value="ClimbLevitate" type="radio"><label for="ClimbLevitate">Levitated</label>
                                         <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
                                     </div>
 								</fieldset>
@@ -222,21 +223,15 @@
                                     </fieldset>
                                 </div>
       						</div>
-
-
-									<div class="row">
-    								<div class="large-12 columns">
-      								<label>Comments
-        								<textarea name="comments" placeholder=""></textarea>
-      								</label>
-    								</div>
-
-
+                            <div class="row">
+                            <div class="large-12 columns">
+                            <label>Comments
+                                <textarea name="comments" placeholder=""></textarea>
+                            </label>
+                            </div>
 							<input class="button round SubmitButton" type="submit" value="Submit">
-							</form>
-
-							
-							</dl>
+					</dl>
+        </form>
 <script>
       $(document).foundation();
 </script>
