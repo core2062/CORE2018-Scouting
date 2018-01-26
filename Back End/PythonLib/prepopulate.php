@@ -84,28 +84,28 @@
       									<div class="row">
       										<fieldset class="large-6 columns">
       										<legend>Delivered Cube in Switch:</legend>
-      										 	<input onclick="EnableAutoGearStatus()"  name=								"DeliverSwitchAuto" id="LeftSwitchAuto" value="LeftSwitchAuto" type="radio"><label for="LeftSwitchAuto">			Left</label>
-      										 	<input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="DeliverSwitchAuto" value="RightSwitchAuto" type="radio"><label for="RightSwitchAuto">Right</label>
-      										 	<input required="" onclick="EnableAutoGearStatus()" name="DeliverSwitchAuto" id="DeliverSwitchAuto" value="FailedSwitchAuto" type="radio"><label for="FailedSwitchAuto">Fail</label>
-       										 	<input required="" onclick="DisableAutoGearStatus()" name="DeliverSwitchAuto" id="DeliverSwitchAuto" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
+      										 	<input onclick="EnableAutoGearStatus()"  name=								"CubeSwitchAuto" id="LeftSwitchAuto" value="LeftSwitchAuto" type="radio"><label for="LeftSwitchAuto">			Left</label>
+      										 	<input required="" onclick="EnableAutoGearStatus()" name="CubeSwitchAuto" id="RightSwitchAuto" value="RightSwitchAuto" type="radio"><label for="RightSwitchAuto">Right</label>
+      										 	<input required="" onclick="EnableAutoGearStatus()" name="CubeSwitchAuto" id="FailedSwitchAuto" value="FailedSwitchAuto" type="radio"><label for="FailedSwitchAuto">Fail</label>
+       										 	<input required="" onclick="DisableAutoGearStatus()" name="CubeSwitchAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
       										</fieldset>
                         				</div>
 
                                         <div class="row">
       										<fieldset class="large-6 columns">
                                                 <legend>Delivered Cube in Scale:</legend>
-                                                    <input onclick="EnableAutoGearStatus()"  name=								"DeliverScaleAuto" id="LeftScaleAuto" value="LeftScaleAuto" type="radio"><label for="LeftScaleAuto">Left</label>
-                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverScaleAuto" id="RightScaleAuto" value="RightScaleAuto" type="radio"><label for="RightScaleAuto">Right</label>
-                                                    <input required="" onclick="EnableAutoGearStatus()" name="DeliverScaleAuto" id="FailedScaleAuto" value="FailedScaleAuto" type="radio"><label for="FailedScaleAuto">Fail</label>
-                                                    <input required="" onclick="DisableAutoGearStatus()" name="DeliverScaleAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
+                                                    <input onclick="EnableAutoGearStatus()"  name=								"CubeScaleAuto" id="LeftScaleAuto" value="LeftScaleAuto" type="radio"><label for="LeftScaleAuto">Left</label>
+                                                    <input required="" onclick="EnableAutoGearStatus()" name="CubeScaleAuto" id="RightScaleAuto" value="RightScaleAuto" type="radio"><label for="RightScaleAuto">Right</label>
+                                                    <input required="" onclick="EnableAutoGearStatus()" name="CubeScaleAuto" id="FailedScaleAuto" value="FailedScaleAuto" type="radio"><label for="FailedScaleAuto">Fail</label>
+                                                    <input required="" onclick="DisableAutoGearStatus()" name="CubeScaleAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No Attempt</label>
       										</fieldset>
                         				</div>
                                         <div class="row">
                                             <fieldset class="large-6 columns">
                                                 <legend>Delivered in Exchange</legend>
-                                                <input name="DeliveredExchangeAuto" id="DidDeliverInExchange" type="radio"><label for="DidDeliverInExchange">Yes</label>
-                                                <input name="DeliveredExchangeAuto" id="DidNotDeliverInExchange" type="radio"><label for="DidNotDeliverInExchange">No</label>
-                                            	<input name="DeliveredExchangeAuto" id="FailedDeliveryInExchange" type="radio"><label for="FailedDeliveryInExchange">Fail</label>
+                                                <input name="CubeExchangeAuto" id="DidDeliverInExchange" type="radio"><label for="DidDeliverInExchange">Yes</label>
+                                                <input name="CubeExchangeAuto" id="DidNotDeliverInExchange" type="radio"><label for="DidNotDeliverInExchange">No</label>
+                                            	<input name="CubeExchangeAuto" id="FailedDeliveryInExchange" type="radio"><label for="FailedDeliveryInExchange">Fail</label>
                                             </fieldset>
                                         </div>
       								</div>
