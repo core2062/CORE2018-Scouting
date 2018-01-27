@@ -25,8 +25,8 @@ TEAM_FIELD_NUMBER = {'team_number': 'TeamNumber'}
 MATCH_NUMBER = {'match_number': 'MatchNumber'}
 
 CHECKBOX_NAMES = [
-    'CrossedBaselineAuto',
-    'CubeFloorPickup'
+    'CubeFloorPickup',
+    'CrossedBaselineAuto'
 ]
 NUMBER_NAMES = [
     MATCH_NUMBER['match_number'],
@@ -71,19 +71,19 @@ Match Report Row Headers (no dependency)
 
 # Show up on Match Report and Ranking Report if applicable
 RANK_AND_MATCH_HEADERS = [
+    'Climb Percentage',
+    'Crossed Baseline Percentage',
+    'Avg Cubes Delivered: Home Switch',
+    'Avg Cubes Delivered: Scale',
+    'Avg Cubes Delivered: Opposing Switch',
+    'Avg Cubes Delivered: Exchange'
 ]
 
 # Shows up as a ranking Option only
 RANK_ONLY_HEADERS = [
-    'Climb Percentage',
     'Auto Switch Percentage',
     'Auto Scale Percentage',
-    'Auto Exchange Percentage',
-    'Crossed Baseline Percentage',
-    'Cubes Delivered: Home Switch',
-    'Cubes Delivered: Scale',
-    'Cubes Delivered: Opposing Switch',
-    'Cubes Delivered: Exchange'
+    'Auto Exchange Percentage'
 ]
 
 # Shows up on Match Report only

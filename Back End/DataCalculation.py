@@ -18,21 +18,22 @@ class TeamData(CORETeamData.Team):
         # Total amount of matches played
         MatchesPlayed = self.num_data_entries('MatchNumber')
         # Climb Percentage
-        TotalClimbs = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[2], 'DidClimb')
-        TotalLevitates = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[2], 'ClimbLevitate')
+        TotalClimbs = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[3], 'DidClimb')
+        TotalLevitates = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[3], 'ClimbLevitate')
         TotalClimbSuccess = TotalLevitates + TotalClimbs
-        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[0]] = TotalClimbSuccess / MatchesPlayed
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[0]] = TotalClimbSuccess / MatchesPlayed
         # Comments
         self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[3]] = self.list_all_results(COREDependencies.COREConstants.TEXT_NAMES[1])
         # Crossed Baseline percentage
-        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[4]] = self.times_key_exists_in_category(COREDependencies.COREConstants.CHECKBOX_NAMES[0], ['ON'])
+        TotalBaselineCrosses = self.times_key_exists_in_category('CrossedBaselineAuto', 'ON')
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[1]] = TotalBaselineCrosses / MatchesPlayed
         # Auto Switch Percentage and Stats
         AutoSwitchLeft = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], 'LeftSwitchAuto')
         AutoSwitchRight = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], 'RightSwitchAuto')
         AutoSwitchNone = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], 'NoAttempt')
         AutoSwitchFail = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], 'FailedSwitchAuto')
         AutoSwitchTotal = AutoSwitchLeft + AutoSwitchRight
-        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[1]] = AutoSwitchTotal / MatchesPlayed
+        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[0]] = AutoSwitchTotal / MatchesPlayed
         self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[0]] = str(AutoSwitchLeft) + ' : ' + str(AutoSwitchRight) + ' : ' + str(AutoSwitchFail) + ' : ' + str(AutoSwitchNone)
         # Auto Scale Percentage and Stats
         AutoScaleLeft = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], 'LeftScaleAuto')
@@ -40,13 +41,13 @@ class TeamData(CORETeamData.Team):
         AutoScaleFail = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], 'FailedScaleAuto')
         AutoScaleNone = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[1], 'NoAttempt')
         AutoScaleTotal = AutoScaleLeft + AutoScaleRight
-        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[2]] = AutoScaleTotal / MatchesPlayed
+        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[1]] = AutoScaleTotal / MatchesPlayed
         self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[1]] = str(AutoScaleLeft) + ' : ' + str(AutoScaleRight) + ' : ' + str(AutoScaleFail) + ' : ' + str(AutoScaleNone)
         # Auto Exchange Percentage
         AutoExchangeDeliver = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[2], 'DidDeliverInExchange')
         AutoExchangeNoDeliver = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[2], 'DidNotDeliverInExchange')
         AutoExchangeFailedDeliver = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[2], 'FailedDeliveryInExchange')
-        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[3]] = AutoExchangeDeliver / MatchesPlayed
+        self.team_data[COREDependencies.COREConstants.RANK_ONLY_HEADERS[2]] = AutoExchangeDeliver / MatchesPlayed
         self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[2]] = str(AutoExchangeDeliver) + ' : ' + str(AutoExchangeNoDeliver) + ' : ' + str(AutoExchangeFailedDeliver)
         # Floor Intake
         #FloorPickupON = self.times_key_exists_in_category(COREDependencies.COREConstants.CHECKBOX_NAMES[1], ['ON'])
@@ -56,3 +57,12 @@ class TeamData(CORETeamData.Team):
        # else:
         #    FloorPickup = 'No'
        # self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[2]] = FloorPickup
+        # Avg Cubes Tele Home Switch
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[2]] = self.avg_data(COREDependencies.COREConstants.NUMBER_NAMES[1])
+        # Avg Cubes Tele Scale
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[3]] = self.avg_data(COREDependencies.COREConstants.NUMBER_NAMES[2])
+        # Avg Cubes Tele Opposing Switch
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[4]] = self.avg_data(COREDependencies.COREConstants.NUMBER_NAMES[3])
+        # Avg Cubes Tele Exchange
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[5]] = self.avg_data(COREDependencies.COREConstants.NUMBER_NAMES[4])
+
