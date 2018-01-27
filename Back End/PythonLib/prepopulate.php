@@ -78,7 +78,7 @@
                                         <div class="row">
                                     		<fieldset class="large-6 columns">
                                         	<legend>Crossed Auto Line:</legend>
-                                         		<input name="CrossedBaselineAuto" id="CrossedBaseline" type="checkbox"><label for="CrossedBaseline">Yes</label>
+                                         		<input name="CrossedBaselineAuto" id="CrossedBaseline" value="CrossedBaseLine" type="checkbox"><label for="CrossedBaseline">Yes</label>
                                     		</fieldset>
                                         </div>
       									<div class="row">
