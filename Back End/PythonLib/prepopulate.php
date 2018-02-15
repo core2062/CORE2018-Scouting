@@ -103,10 +103,10 @@
                                         <div class="row">
                                             <fieldset class="large-6 columns">
                                                 <legend>Delivered in Exchange</legend>
-                                                <input name="CubeExchangeAuto" id="DidDeliverInExchange" value="DidDeliverInExchange" type="radio"><label for="DidDeliverInExchange">Yes</label>
-                                                <input name="CubeExchangeAuto" id="DidNotDeliverInExchange" value="DidNotDeliverInExchange" type="radio"><label for="DidNotDeliverInExchange">No</label>
-                                            	<input name="CubeExchangeAuto" id="FailedDeliveryInExchange" value="FailedDeliveryInExchange" type="radio"><label for="FailedDeliveryInExchange">Fail</label>
-                                            </fieldset>
+                                                 <input onclick="EnableAutoExchangeStatus()"  name=                              "CubeExchangeAuto" id="ExchangeAuto" value="ExchangeAuto" type="radio"><label for="ExchangeAuto">Yes</label>
+                                                    <input required="" onclick="DisableAutoExchangeStatus()" name="CubeExchangeAuto" id="NoAttempt" value="NoAttempt" type="radio"><label for="NoAttempt">No</label>
+                                                    <input required="" onclick="EnableExchangeStatus()" name="CubeExchangeAuto" id="FailedExchangeAuto" value="FailedExchangeAuto" type="radio"><label for="FailedExchangeAuto">Fail</label>
+      										</fieldset>
                                         </div>
       								</div>
       							</div>

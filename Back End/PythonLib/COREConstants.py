@@ -49,7 +49,7 @@ RADIO_NAMES = [
 RADIO_VALUES = {
     'CubeSwitchAuto': ('LeftSwitchAuto', 'RightSwitchAuto', 'NoAttempt', 'FailedSwitchAuto'),
     'CubeScaleAuto': ('LeftScaleAuto', 'RightScaleAuto', 'NoAttempt', 'FailedScaleAuto'),
-    'CubeExchangeAuto': ('DidDeliverInExchange', 'DidNotDeliverInExchange', 'FailedDeliveryInExchange'),
+    'CubeExchangeAuto': ('ExchangeAuto', 'NoAttempt', 'FailedExchangeAuto'),
     'Climb': ('NoClimb', 'ClimbPark', 'DidClimb', 'ClimbLevitate', 'ClimbFail')
 }
 
@@ -71,7 +71,6 @@ Match Report Row Headers (no dependency)
 
 # Show up on Match Report and Ranking Report if applicable
 RANK_AND_MATCH_HEADERS = [
-    'Climb Percentage',
     'Crossed Baseline Percentage',
     'Avg Cubes Delivered: Home Switch',
     'Avg Cubes Delivered: Scale',
@@ -83,14 +82,16 @@ RANK_AND_MATCH_HEADERS = [
 RANK_ONLY_HEADERS = [
     'Auto Switch Percentage',
     'Auto Scale Percentage',
-    'Auto Exchange Percentage'
+    'Auto Exchange Percentage',
+    'Climb Percentage'
 ]
 
 # Shows up on Match Report only
 MATCH_HEADERS = [
-    'Switch Auto, Left:Right:Fail:None',
-    'Scale Auto, Left:Right:Fail:None',
-    'Exchange Auto, Yes:No:Fail',
+    'Climb, Climbs : Levitates : Parks : Fails : None',
+    'Switch Auto, Left : Right : Fail : None',
+    'Scale Auto, Left : Right : Fail : None',
+    'Exchange Auto, Yes : No : Fail',
     'Comments'
 ]
 
