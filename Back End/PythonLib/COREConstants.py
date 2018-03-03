@@ -83,7 +83,7 @@ RANK_ONLY_HEADERS = [
     'Auto Switch Percentage',
     'Auto Scale Percentage',
     'Auto Exchange Percentage',
-    'Climb Percentage'
+    'Climbing Percentage'
 ]
 
 # Shows up on Match Report only
@@ -124,13 +124,13 @@ RANK_REPORT_FIELD_NAMES = {
 
 RANK_OPTIONS = [
     # EXAMPLE     ('Defense', 'Defense Rating', 'category', ('Amazing', 'Good', 'Alright', 'Not Great')) (Also can look above for example^^^
-    ('ClimbPercent', 'Climbing Percentage', 'descending'),
+    ('ClimbPercentage', 'Climbing Percentage', 'descending'),
     ('AutoSwitchPercent', 'Auto Switch Percentage', 'descending'),
     ('AutoScalePercent', 'Auto Scale Percentage', 'descending'),
-    ('AutoExchangePercent', 'Auto Exchange Percent', 'descending'),
-    ('CrossBaselinePercent', 'Cross Baseline Percentage', 'descending'),
-    ('TeleCubesHSwitch', 'Cubes Delivered: Home Switch', 'descending'),
-    ('TeleCubesOSwitch', 'Cubes Delivered: Opposing Switch', 'descending'),
-    ('TeleCubesScale', 'Cubes Delivered: Scale', 'descending'),
-    ('TeleCubesExchange', 'Cubes Delivered: Exchange', 'descending'),
+    ('AutoExchangePercent', 'Auto Exchange Percentage', 'descending'),
+    ('CrossBaselinePercent', 'Crossed Baseline Percentage', 'descending'),
+    ('AvgTeleCubesHSwitch', 'Avg Cubes Delivered: Home Switch', 'descending'),
+    ('AvgTeleCubesOSwitch', 'Avg Cubes Delivered: Opposing Switch', 'descending'),
+    ('AvgTeleCubesScale', 'Avg Cubes Delivered: Scale', 'descending'),
+    ('AvgTeleCubesExchange', 'Avg Cubes Delivered: Exchange', 'descending')
 ]

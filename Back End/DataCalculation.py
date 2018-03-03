@@ -29,7 +29,7 @@ class TeamData(CORETeamData.Team):
         self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[4]] = self.list_all_results(COREDependencies.COREConstants.TEXT_NAMES[1])
         # Crossed Baseline percentage
         # TotalBaselineCrosses = self.times_key_exists_in_category('CrossedBaselineAuto', 'ON')
-        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[0]] = str(int(self.times_key_exists_in_category('CrossedBaselineAuto', 'ON') / MatchesPlayed * 100)) + "%"
+        self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[0]] = self.times_key_exists_in_category('CrossedBaselineAuto', 'ON') / MatchesPlayed
         # Auto Switch Percentage and Stats
         AutoSwitchLeft = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], 'LeftSwitchAuto')
         AutoSwitchRight = self.times_key_exists_in_category(COREDependencies.COREConstants.RADIO_NAMES[0], 'RightSwitchAuto')
