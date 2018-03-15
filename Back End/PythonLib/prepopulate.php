@@ -209,11 +209,11 @@
                                         <input required="" name="Climb" id="ClimbPark" value="ClimbPark" type="radio"><label for="ClimbPark">Parked</label>
                                         <input required="" name="Climb" id="ClimbLevitate" value="ClimbLevitate" type="radio"><label for="ClimbLevitate">Levitated</label>
                                         <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
+                                        <legend>Assisted Robots with Climb:</legend>
+                                        <input name="ClimbAssist" id="ClimbAssist" type="checkbox"><label for="ClimbAssist">Climb Assist?</label>
                                     </div>
 								</fieldset>
-                                <div class="row">
-                                    <input name="ClimbAssist" id="ClimbAssist" type="checkbox"><label for="ClimbAssist">Climb Assist?</label>
-                                </div>
+
                                 <div class="row">
                                     <fieldset class="large-6 columns">
                                         <legend>Defense:</legend>
