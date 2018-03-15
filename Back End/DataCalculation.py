@@ -68,4 +68,5 @@ class TeamData(CORETeamData.Team):
         self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[3]] = self.avg_data(COREDependencies.COREConstants.NUMBER_NAMES[3])
         # Avg Cubes Tele Exchange
         self.team_data[COREDependencies.COREConstants.RANK_AND_MATCH_HEADERS[4]] = self.avg_data(COREDependencies.COREConstants.NUMBER_NAMES[4])
-
+        # Climb Assist
+        self.team_data[COREDependencies.COREConstants.MATCH_HEADERS[5]] = self.times_key_exists_in_category('ClimbAssist', 'ON') / MatchesPlayed

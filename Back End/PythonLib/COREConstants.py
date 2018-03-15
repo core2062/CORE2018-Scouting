@@ -26,7 +26,8 @@ MATCH_NUMBER = {'match_number': 'MatchNumber'}
 
 CHECKBOX_NAMES = [
     'CubeFloorPickup',
-    'CrossedBaselineAuto'
+    'CrossedBaselineAuto',
+    'ClimbAssist'
 ]
 NUMBER_NAMES = [
     MATCH_NUMBER['match_number'],
@@ -92,7 +93,8 @@ MATCH_HEADERS = [
     'Switch Auto, Left : Right : Fail : None',
     'Scale Auto, Left : Right : Fail : None',
     'Exchange Auto, Yes : No : Fail',
-    'Comments'
+    'Comments',
+    'Climb Assist'
 ]
 
 

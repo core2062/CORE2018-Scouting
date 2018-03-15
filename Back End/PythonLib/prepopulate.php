@@ -211,7 +211,9 @@
                                         <input required="" name="Climb" id="ClimbFail" value="ClimbFail" type="radio"><label for="ClimbFail">Failed Climb</label>
                                     </div>
 								</fieldset>
-
+                                <div class="row">
+                                    <input name="ClimbAssist" id="ClimbAssist" type="checkbox"><label for="ClimbAssist">Climb Assist?</label>
+                                </div>
                                 <div class="row">
                                     <fieldset class="large-6 columns">
                                         <legend>Defense:</legend>
