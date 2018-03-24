@@ -93,8 +93,7 @@ MATCH_HEADERS = [
     'Switch Auto, Left : Right : Fail : None',
     'Scale Auto, Left : Right : Fail : None',
     'Exchange Auto, Yes : No : Fail',
-    'Comments',
-    'Climb Assist'
+    'Comments'
 ]
 
 
